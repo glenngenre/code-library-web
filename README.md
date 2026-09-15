@@ -19,8 +19,6 @@
 
 The frontend calls `https://api.apps.skwtr.com/codelibrary/` directly in both development and production. The shared base URL is defined in `src/utils/api.ts`; endpoint paths retain `/api`, so the snippet list URL is `https://api.apps.skwtr.com/codelibrary/api/snippets`.
 
-No Vite proxy, frontend `/api` reverse-proxy route, or `VITE_PROXY_TARGET` variable is needed. Local development also uses this remote API, including write requests.
-
 ## Done Features
 - [x] **Multi-page Navigation** - Home, Library, About, Detail, and Folio views
 - [x] **Syntax Highlighting** - Support for 15+ programming languages (Python, JavaScript, TypeScript, Java, C++, C#, Go, Rust, Ruby, PHP, SQL, Bash, JSON, XML/HTML, CSS)
