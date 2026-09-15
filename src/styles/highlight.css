@@ -1,0 +1,135 @@
+/* ═══════════════════════════════════════════════════════════════
+   Highlight.js Custom Theme - Code Paste Service
+   A syntax highlighting theme that matches our design system
+   ═══════════════════════════════════════════════════════════════ */
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  color: var(--color-text);
+  background: transparent;
+}
+
+/* ─── Comments & Documentation ────────────────────────────────── */
+.hljs-comment,
+.hljs-quote,
+.hljs-doctag {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ─── Keywords & Control Flow ─────────────────────────────────── */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link,
+.hljs-tag {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ─── Strings & Literals ──────────────────────────────────────── */
+.hljs-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-addition,
+.hljs-built_in,
+.hljs-builtin-name {
+  color: var(--color-primary-warm);
+}
+
+/* ─── Functions & Methods ─────────────────────────────────────── */
+.hljs-title,
+.hljs-function .hljs-title,
+.hljs-class .hljs-title,
+.hljs-title.class_,
+.hljs-title.function_ {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* ─── Variables & Attributes ──────────────────────────────────── */
+.hljs-attr,
+.hljs-attribute,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-class,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-name {
+  color: var(--color-primary-gold);
+}
+
+/* ─── Parameters & Meta ───────────────────────────────────────── */
+.hljs-params,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-meta .hljs-string {
+  color: var(--color-text-faded);
+}
+
+/* ─── Operators & Symbols ─────────────────────────────────────── */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-property,
+.hljs-operator {
+  color: var(--color-text);
+}
+
+/* ─── Tags & Markup ───────────────────────────────────────────── */
+.hljs-tag .hljs-name,
+.hljs-tag .hljs-attr {
+  color: var(--color-primary);
+}
+
+.hljs-selector-id {
+  color: var(--color-primary-gold);
+  font-weight: 700;
+}
+
+/* ─── Special Cases ───────────────────────────────────────────── */
+.hljs-deletion {
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+.hljs-addition {
+  color: var(--color-primary-warm);
+  background: rgba(139, 26, 26, 0.05);
+}
+
+.hljs-formula {
+  background: var(--color-primary-subtle);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Emphasis & Strong ───────────────────────────────────────── */
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+/* ─── Links ────────────────────────────────────────────────────── */
+.hljs-link {
+  text-decoration: underline;
+}
+
+/* ─── Code Blocks ──────────────────────────────────────────────── */
+.hljs-code {
+  color: var(--color-text-muted);
+}
+
+/* ─── Dark Mode Adjustments ───────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .hljs {
+    color: var(--color-text);
+  }
+}
