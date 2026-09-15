@@ -2,6 +2,7 @@ export type Snippet = {
   snippet_id: string;
   title: string;
   description?: string;
+  category?: string;
   code: string;
   language: string;
   filename: string;

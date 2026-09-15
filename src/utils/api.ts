@@ -9,8 +9,10 @@ import {
   type SnippetPayload,
 } from "./types";
 
+const API_BASE_URL = "https://api.apps.skwtr.com/codelibrary";
+
 async function fetchJSON(path: string, options?: RequestInit): Promise<unknown> {
-  const response = await fetch(path, options);
+  const response = await fetch(`${API_BASE_URL}${path}`, options);
   if (response.status === 429) {
     const retryAfter = response.headers.get("Retry-After");
     throw new RateLimitError(retryAfter ? parseInt(retryAfter) : null);

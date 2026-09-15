@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
 import { PhCopy, PhCheck, PhDownload } from "@phosphor-icons/vue";
 import CodeBlock from "@/components/CodeBlock.vue";
-import { copyToClipboard, downloadAsFile } from "@/utils";
+import { copyToClipboard, downloadAsFile, snippetAPI } from "@/utils";
 
 const route = useRoute();
 
@@ -39,8 +39,7 @@ onMounted(async () => {
 
   if (snippetId) {
     try {
-      const response = await fetch(`https://codelibrary.skwtr.com/api/snippet/${snippetId}`);
-      const data = await response.json();
+      const data = await snippetAPI.getById(snippetId);
 
       if (data.success) {
         const snippet = data.data;
